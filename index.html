@@ -1,70 +1,126 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Mockup - Extended</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenGram</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 24px;
+      color: #2e7d32;
+      margin: 0;
+    }
+
+    .feed {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 80px;
+    }
+
+    .post {
+      width: 100%;
+      max-width: 500px;
+      background-color: #fff;
+      margin: 16px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+    }
+
+    .post-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    .post-header .user-info {
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .post img.post-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    .post-footer {
+      padding: 12px;
+    }
+
+    .post-footer .likes {
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #2e7d32;
+    }
+
+    .post-footer .caption {
+      font-size: 14px;
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+    }
+
+    nav img {
+      width: 24px;
+      height: 24px;
+      opacity: 0.7;
+    }
+
+    nav img.active {
+      opacity: 1;
+      filter: hue-rotate(90deg);
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>GreenGram</h1>
+    <img src="https://img.icons8.com/ios-glyphs/30/000000/leaf.png" alt="Nature Icon" />
+  </header>
 
-    <div class="main-container">
+  <div class="feed">
+    <div class="post">
+      <div class="post-header">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User" />
+        <div class="user-info">nature_girl</di_
 
-        <aside class="sidebar">
-            <h1 class="logo">NatureGram</h1>
-            <nav class="sidebar-nav">
-                <a href="#" class="nav-item active"><i class="fa-solid fa-house-chimney"></i><span>หน้าหลัก</span></a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass"></i><span>ค้นหา</span></a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-compass"></i><span>สำรวจ</span></a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-video"></i><span>Reels</span></a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-paper-plane"></i><span>ข้อความ</span></a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-heart"></i><span>การแจ้งเตือน</span></a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-plus-square"></i><span>สร้าง</span></a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-user-circle"></i><span>โปรไฟล์</span></a>
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <div class="content-wrapper">
-                <section class="story-bar">
-                    </section>
-                
-                <section class="posts">
-                    </section>
-            </div>
-        </main>
-
-        <aside class="suggestions-column">
-            <div class="profile-summary">
-                <img src="https://images.unsplash.com/photo-1549419149-a2e6f4044941?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" alt="Your Profile" class="profile-img">
-                <div class="profile-info">
-                    <span class="username">your_nature_life</span>
-                    <span class="fullname">John Doe</span>
-                </div>
-            </div>
-
-            <div class="suggestions-section">
-                <div class="suggestions-header">
-                    <span>แนะนำสำหรับคุณ</span>
-                    <a href="#">ดูทั้งหมด</a>
-                </div>
-                </div>
-        </aside>
-
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <a href="#" class="nav-item active"><i class="fa-solid fa-house-chimney"></i></a>
-            <a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#" class="nav-item"><i class="fa-solid fa-plus-square"></i></a>
-            <a href="#" class="nav-item"><i class="fa-solid fa-heart"></i></a>
-            <a href="#" class="nav-item"><i class="fa-solid fa-user-circle"></i></a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-          
+         
