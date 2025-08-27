@@ -8,16 +8,17 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f4f1;
+      background-color: #f3f7f3;
       color: #333;
     }
 
+    /* Header */
     header {
       background-color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 16px;
+      padding: 14px 16px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
@@ -31,20 +32,23 @@
       margin: 0;
     }
 
+    /* Feed */
     .feed {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding-bottom: 80px;
+      margin-top: 8px;
     }
 
     .post {
       width: 100%;
       max-width: 500px;
       background-color: #fff;
-      margin: 16px 0;
+      margin: 12px 0;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .post-header {
@@ -60,33 +64,37 @@
       margin-right: 12px;
     }
 
-    .post-header .user-info {
-      font-weight: bold;
-      font-size: 15px;
+    .user-info {
+      font-weight: 600;
+      font-size: 14px;
     }
 
     .post img.post-image {
       width: 100%;
       height: auto;
       display: block;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
     }
 
     .post-footer {
       padding: 12px;
     }
 
-    .post-footer .likes {
+    .likes {
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       color: #2e7d32;
     }
 
-    .post-footer .caption {
+    .caption {
       font-size: 14px;
+      line-height: 1.4;
     }
 
+    .caption strong {
+      margin-right: 5px;
+    }
+
+    /* Bottom nav */
     nav {
       position: fixed;
       bottom: 0;
@@ -109,18 +117,86 @@
       opacity: 1;
       filter: hue-rotate(90deg);
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>GreenGram</h1>
-    <img src="https://img.icons8.com/ios-glyphs/30/000000/leaf.png" alt="Nature Icon" />
+    <img src="https://img.icons8.com/ios-filled/30/4caf50/leaf.png" alt="Nature Icon" />
   </header>
 
   <div class="feed">
+
+    <!-- Post 1 -->
     <div class="post">
       <div class="post-header">
         <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User" />
-        <div class="user-info">nature_girl</di_
+        <div class="user-info">nature_girl</div>
+      </div>
+      <img class="post-image" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Forest" />
+      <div class="post-footer">
+        <div class="likes">1,254 likes</div>
+        <div class="caption"><strong>nature_girl</strong> Loving this peaceful forest walk 🌲✨</div>
+      </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="post">
+      <div class="post-header">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User" />
+        <div class="user-info">wildlife_explorer</div>
+      </div>
+      <img class="post-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Sunset hike" />
+      <div class="post-footer">
+        <div class="likes">870 likes</div>
+        <div class="caption"><strong>wildlife_explorer</strong> Sunset hiking trail with wild deer 🦌🌄</div>
+      </div>
+    </div>
+
+    <!-- Post 3 -->
+    <div class="post">
+      <div class="post-header">
+        <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="User" />
+        <div class="user-info">green.tea</div>
+      </div>
+      <img class="post-image" src="https://images.unsplash.com/photo-1499346030926-9a72daac6c63" alt="Tea field" />
+      <div class="post-footer">
+        <div class="likes">1,032 likes</div>
+        <div class="caption"><strong>green.tea</strong> Tea fields in Chiang Rai ☘️ Perfect breeze today!</div>
+      </div>
+    </div>
+
+    <!-- Post 4 -->
+    <div class="post">
+      <div class="post-header">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="User" />
+        <div class="user-info">eco_traveler</div>
+      </div>
+      <img class="post-image" src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Mountain" />
+      <div class="post-footer">
+        <div class="likes">742 likes</div>
+        <div class="caption"><strong>eco_traveler</strong> Camped here last night 🌌⛺️ Nature is the best reset</div>
+      </div>
+    </div>
+
+  </div>
+
+  <nav>
+    <img class="active" src="https://img.icons8.com/ios-filled/50/4caf50/home.png" alt="Home"/>
+    <img src="https://img.icons8.com/ios-filled/50/4caf50/search--v1.png" alt="Search"/>
+    <img src="https://img.icons8.com/ios-filled/50/4caf50/plus-math.png" alt="Add"/>
+    <img src="https://img.icons8.com/ios-filled/50/4caf50/like--v1.png" alt="Likes"/>
+    <img src="https://randomuser.me/api/portraits/women/68.jpg" style="border-radius:50%;width:24px;height:24px;" alt="Profile"/>
+  </nav>
+
+</body>
+</html>
 
          
